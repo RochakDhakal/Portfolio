@@ -22,7 +22,7 @@ function Name() {
         Rochak
       </h1>
       <span
-        className="text-amber-100 h-1/4 uppercase font-oldstandardtt"
+        className="text-amber-100 h-1/4 uppercase font-proxima selection:text-red-300"
         style={{ fontSize: "4vw", wordSpacing: "3vw", letterSpacing: "1.5vw" }}
       >
         {text}

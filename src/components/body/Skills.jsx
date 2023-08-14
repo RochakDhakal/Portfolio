@@ -7,8 +7,8 @@ function Skills() {
     Aos.init({duration:1000});
   }, []);
   return (
-    <div className="md:h-screen bg-gray-900 text-amber-100 md:p-10" id="skills">
-      <h1 className="font-oldstandardtt text-3xl text-center md:text-4xl">Skills</h1>
+    <div className="md:h-screen bg-gray-900 text-amber-100 md:p-10 selection:text-red-300" id="skills">
+      <h1 className="font-handlee text-3xl text-center md:text-4xl">Skills</h1>
       <div className="font-wixmadefor">
         <div className="w-full flex justify-center items-center">
           <div className="w-1/2 text-xl flex justify-center "data-aos="fade-left">HTML</div>

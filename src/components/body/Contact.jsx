@@ -191,13 +191,13 @@ export default function Modal() {
 
   return (
     <aside
-      className="bg-gray-900 p-2  w-full flex justify-center items-center md:h-screen"
+      className="bg-gray-900 p-2  w-full flex justify-center items-center md:h-screen selection:text-red-300"
       
     >
       <div className="md:w-3/4 bg-gray-800 p-2 rounded-3xl flex flex-col items-center justify-center" >
         <div className="text-amber-100 "data-aos="fade-up">
           <h1
-            className="font-oldstandardtt p-5 flex justify-center items-center text-3xl md:text-4xl"
+            className="font-handlee p-5 flex justify-center items-center text-3xl md:text-4xl"
             id="contact"
           >
             Contact
@@ -207,9 +207,9 @@ export default function Modal() {
             and I’ll get in touch as soon as possible.
           </p>
         </div>
-        <div className="pb-5 md:pb-10" data-aos="fade-up">
+        <div className="pb-5 md:pb-10" >
           <button
-            className="font-wixmadefor m-5 my-10 bg-amber-100 text-gray-900 active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-110 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            className="font-wixmadefor m-5 my-10 bg-amber-100 text-gray-900 active:bg-amber-500 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-110 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button"
             onClick={() => setShowModal(true)}
           >

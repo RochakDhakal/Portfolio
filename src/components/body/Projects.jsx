@@ -9,8 +9,8 @@ function Projects() {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <div className="bg-gray-900 text-amber-100 md:h-full py-16" id="projects">
-      <h1 className="text-center text-3xl font-oldstandardtt md:text-4xl">
+    <div className="bg-gray-900 text-amber-100 md:h-full py-16 selection:text-red-300" id="projects">
+      <h1 className="text-center text-3xl font-handlee md:text-4xl">
         Projects
       </h1>
       <div className="block p-2 lg:p-10">

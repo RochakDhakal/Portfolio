@@ -5,7 +5,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="flex justify-center items-center text-amber-200 bg-gray-800">
+    <footer className="flex justify-center items-center text-amber-200 bg-gray-800 selection:text-red-300">
       <div className="pt-5">
         <a href="https://www.linkedin.com/in/rochak-dhakal/" target="_blank">
           <FontAwesomeIcon

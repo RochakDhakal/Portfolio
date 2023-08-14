@@ -9,10 +9,10 @@ function Experience() {
   })
   return (
     <section
-      className="bg-gray-900 flex flex-col justify-center items-center text-amber-100 py-16 md:h-screen"
+      className="bg-gray-900 flex flex-col justify-center items-center text-amber-100 py-16 md:h-screen selection:text-red-300"
       id="experience"
     >
-      <h1 className="font-oldstandardtt text-3xl md:text-4xl">Experience</h1>
+      <h1 className="font-handlee text-3xl md:text-4xl">Experience</h1>
       {/* Work and Education */}
       <article className="container p-5 pt-10">
         {/* Work */}
