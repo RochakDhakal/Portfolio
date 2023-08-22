@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import calculator from "../../assets/Calculator.gif";
 import shopping from "../../assets/Shopping.gif";
 import covid from "../../assets/Covid.gif";
+import todo from "../../assets/ToDo.gif"
 import Aos from "aos";
 import "aos/dist/aos.css";
 function Projects() {
@@ -74,6 +75,41 @@ function Projects() {
             className="w-1/4 text-center text-sm lg:w-1/4 lg:text-xl"
           >
             <a href="https://github.com/RochakDhakal/Covid-19-Report">
+              View Code
+            </a>
+          </div>
+        </div>
+        
+        <div
+          className="w-full m-1 bg-gray-800 rounded-3xl flex justify-evenly items-center"
+          data-aos="fade-up"
+        >
+          <div className="w-2/5 text-center lg:1/4 p-5">
+            <img
+              src={todo}
+              alt="To-Do List"
+              className="h-20 grayscale hover:grayscale-0 rounded-3xl md:h-full ease-in-out duration-500"
+            />
+          </div>
+          <div
+            className="w-2/5 h-full text-left p-5 lg:w-2/4"
+            data-aos="fade-up"
+          >
+            <div className="h-1/2 font-wixmadefor text-base md:text-3xl text-amber-300">
+              To Do List
+            </div>
+            <div className="h-1/2 font-wixmadefor text-xs md:text-xl">
+              Tailwind, ReactJs and React hooks
+            </div>
+          </div>
+          <div
+            className="w-1/4 text-center text-sm lg:w-1/4 lg:text-xl"
+            data-aos="fade-up"
+          >
+            <a
+              href="https://github.com/RochakDhakal/To-do-List"
+              target="_blank"
+            >
               View Code
             </a>
           </div>

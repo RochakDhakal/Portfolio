@@ -68,7 +68,6 @@ export default function Modal() {
   // EmailJs
   const sendEmail = (e) => {
     e.preventDefault();
-
     if (!validateInputs()) {
       return;
     }
@@ -86,7 +85,7 @@ export default function Modal() {
           console.log(result.text);
           setIsDisabled(true);
           alert(
-            "Your message has been sent, You will now be redirected to the Home page!"
+            "Your message has been sent!"
           );
           setShowModal(false);
           setFname("");
@@ -209,7 +208,7 @@ export default function Modal() {
         </div>
         <div className="pb-5 md:pb-10" >
           <button
-            className="font-wixmadefor m-5 my-10 bg-amber-100 text-gray-900 active:bg-amber-500 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-110 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            className="font-wixmadefor m-5 my-10 bg-amber-100 text-gray-900 active:scale-90 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-110 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button"
             onClick={() => setShowModal(true)}
           >
@@ -326,14 +325,14 @@ export default function Modal() {
                       </div>
                       <div className="flex items-center justify-end p-6 border-t border-solid border-gray-800 rounded-b">
                         <button
-                          className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm active:scale-95 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="reset"
                           onClick={() => setShowModal(false)}
                         >
                           Close
                         </button>
                         <button
-                          className="bg-emerald-500 text-white  font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          className="bg-emerald-500 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-105 active:scale-90 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="submit"
                           disabled={isDisabled}
                         >

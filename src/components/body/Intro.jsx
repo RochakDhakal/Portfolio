@@ -30,8 +30,8 @@ function Intro() {
             dynamic digital interfaces.
           </p>
           <div className="p-5 flex justify-center items-center ">
-            <a href={resume} download="Rochak Dhakal CV" target="_blank" rel="noreferrer noopener">
-              <button className=" font-handlee bg-amber-200 rounded-3xl p-4 text-gray-900 hover:scale-105 uppercase active:bg-amber-500 focus:outline-none outline-none ease-in-out duration-200 active:text-amber-100">
+            <a download="Rochak Dhakal CV" target="_blank" rel="noreferrer noopener">
+              <button className=" font-handlee bg-amber-200 rounded-3xl p-4 text-gray-900 hover:scale-105 uppercase active:scale-90 focus:outline-none outline-none ease-in-out duration-200">
                 Download My CV
               </button>
             </a>
