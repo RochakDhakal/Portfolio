@@ -13,7 +13,7 @@ function Name() {
     Aos.init({ duration: 1000, });
   }, []);
   return (
-    <header className="bg-gray-900 text-white flex flex-col items-center pt-16 h-full md:h-screen">
+    <header className="bg-gray-900 text-white flex flex-col justify-center items-center pt-16 h-full md:h-screen">
       <h1
         data-aos="zoom-in"
         className="font-tiltprism h-3/2 text-amber-100 selection:text-green-500"

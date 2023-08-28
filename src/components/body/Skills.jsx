@@ -1,103 +1,30 @@
 import React, { useEffect } from "react";
+import ImageCard from "../utilities/ImageCard";
+import html from "../../assets/html.png";
+import css from "../../assets/css.png"
+import javascript from "../../assets/javascript.png"
+import react from "../../assets/react.png"
+import redux from "../../assets/Redux.png"
+import bootstrap from "../../assets/bootstrap.png"
+import tailwind from "../../assets/tailwind.png"
 import Aos from "aos";
 import "aos/dist/aos.css";
-
 function Skills() {
   useEffect(() => {
-    Aos.init({duration:1000});
+    Aos.init({ duration: 1000 });
   }, []);
   return (
-    <div className="md:h-screen bg-gray-900 text-amber-100 md:p-10 selection:text-red-300" id="skills">
-      <h1 className="font-handlee text-3xl text-center md:text-4xl">Skills</h1>
-      <div className="font-wixmadefor">
-        <div className="w-full flex justify-center items-center">
-          <div className="w-1/2 text-xl flex justify-center "data-aos="fade-left">HTML</div>
-          <div className="w-1/2 p-5" data-aos="fade-right">
-            <div className="w-11/12 bg-amber-100  h-full text-center">
-              <div
-                className="bg-amber-600 h-full  p-0"
-                style={{ width: "99%" }}
-              >99%</div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center items-center">
-          <div className="w-1/2 text-xl flex justify-center" data-aos="fade-left">CSS</div>
-          <div className="w-1/2 p-5" data-aos="fade-right">
-            <div className="w-11/12 bg-amber-100  h-full text-center">
-              <div
-                className="bg-amber-600 h-full  p-0"
-                style={{ width: "96%" }}
-              >96%</div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center items-center">
-          <div className="w-1/2 text-xl flex justify-center" data-aos="fade-left">JavaScript</div>
-          <div className="w-1/2 p-5" data-aos="fade-right">
-            <div className="w-11/12 bg-amber-100  h-full text-center">
-              <div
-                className="bg-amber-600 h-full  p-0"
-                style={{ width: "87%" }}
-              >87%</div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center items-center">
-          <div className="w-1/2 text-xl flex justify-center" data-aos="fade-left">React JS</div>
-          <div className="w-1/2 p-5" data-aos="fade-right">
-            <div className="w-11/12 bg-amber-100  h-full text-center">
-              <div
-                className="bg-amber-600 h-full  p-0"
-                style={{ width: "78%" }}
-              >79%</div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center items-center">
-          <div className="w-1/2 text-xl flex justify-center" data-aos="fade-left">Redux</div>
-          <div className="w-1/2 p-5" data-aos="fade-right">
-            <div className="w-11/12 bg-amber-100  h-full text-center">
-              <div
-                className="bg-amber-600 h-full  p-0"
-                style={{ width: "60%" }}
-              >60%</div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center items-center">
-          <div className="w-1/2 text-xl flex justify-center" data-aos="fade-left">Bootstrap</div>
-          <div className="w-1/2 p-5" data-aos="fade-right">
-            <div className="w-11/12 bg-amber-100  h-full text-center">
-              <div
-                className="bg-amber-600 h-full  p-0"
-                style={{ width: "89%" }}
-              >89%</div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center items-center">
-          <div className="w-1/2 text-xl flex justify-center" data-aos="fade-left">Tailwind</div>
-          <div className="w-1/2 p-5" data-aos="fade-right">
-            <div className="w-11/12 bg-amber-100  h-full text-center">
-              <div
-                className="bg-amber-600 h-full  p-0"
-                style={{ width: "80%" }}
-              >80%</div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center items-center">
-          <div className="w-1/2 text-xl flex justify-center" data-aos="fade-left">Axios</div>
-          <div className="w-1/2 p-5" data-aos="fade-right">
-            <div className="w-11/12 bg-amber-100  h-full text-center" >
-              <div
-                className="bg-amber-600 h-full  p-0"
-                
-                style={{ width: "89%" }}
-              >75%</div>
-            </div>
-          </div>
+    <div className="px-10 pt-10 bg-gray-900 text-amber-100 lg:h-full w-full">
+      <h3 className="text-center text-3xl font-handlee md:text-4xl h-1/2 w-full" id="skills">Skills</h3>
+      <div className="flex justify-center items-center">
+        <div className="w-3/4 grid md:grid-cols-4 h-full m-5 p-5">
+          <ImageCard src={html} alt={"HTML"} title={"HTML"} data-aos="fade-up"/>
+          <ImageCard src={css} alt={"CSS3"} title={"CSS3"} data-aos="fade-up"/>
+          <ImageCard src={javascript} alt={"Javascript"} title={"Javascript"} data-aos="fade-up" />
+          <ImageCard src={react} alt={"React JS"} title={"React JS"} data-aos="fade-up"/>
+          <ImageCard src={bootstrap} alt={"Bootstrap"} title={"Bootstrap"} data-aos="fade-up"/>
+          <ImageCard src={tailwind} alt={"Tailwind"} title={"Tailwind"} data-aos="fade-up"/>
+          <ImageCard src={redux} alt={"Redux"} title={"React Redux"} data-aos="fade-up"/>
         </div>
       </div>
     </div>

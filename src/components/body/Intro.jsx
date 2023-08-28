@@ -18,7 +18,7 @@ function Intro() {
             src={avatar}
             alt="Avatar"
             data-aos="zoom-out"
-            className="w-1/4 rounded-full md:w-1/2 grayscale hover:grayscale-0 ease-in-out duration-500"
+            className="w-1/4 rounded-full md:w-1/2 grayscale hover:grayscale-0 ease-in-out duration-30000"
           />
         </div>
         <div className="block md:w-1/2 md:flex md:flex-col md:justify-center selection:text-red-300">
@@ -30,7 +30,7 @@ function Intro() {
             dynamic digital interfaces.
           </p>
           <div className="p-5 flex justify-center items-center ">
-            <a download="Rochak Dhakal CV" target="_blank" rel="noreferrer noopener">
+            <a href={resume} download="Rochak Dhakal CV" target="_blank" rel="noreferrer noopener">
               <button className=" font-handlee bg-amber-200 rounded-3xl p-4 text-gray-900 hover:scale-105 uppercase active:scale-90 focus:outline-none outline-none ease-in-out duration-200">
                 Download My CV
               </button>
