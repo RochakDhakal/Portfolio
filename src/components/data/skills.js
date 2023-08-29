@@ -1,36 +1,43 @@
+import html from "../../assets/html.png"
+import css from "../../assets/css.png"
+import javascript from "../../assets/javascript.png"
+import react from "../../assets/react.png"
+import bootstrap from "../../assets/bootstrap.png"
+import tailwind from "../../assets/tailwind.png"
+import redux from "../../assets/Redux.png"
 const Skills = [
   {
-    image: "/src/assets/html.png",
+    image: html,
     alt: "HTML",
     title: "HTML 5",
   },
   {
-    image: "/src/assets/css.png",
+    image: css,
     alt: "CSS 3",
     title: "CSS 3",
   },
   {
-    image: "/src/assets/javascript.png",
+    image: javascript,
     alt: "JavaScript",
     title: "JavaScript",
   },
   {
-    image: "/src/assets/react.png",
+    image: react,
     alt: "React JS",
     title: "React JS",
   },
   {
-    image: "/src/assets/Tailwind.png",
+    image: tailwind,
     alt: "Tailwind",
     title: "Tailwind CSS",
   },
   {
-    image: "/src/assets/bootstrap.png",
+    image: bootstrap,
     alt: "Bootstrap",
     title: "Bootstrap",
   },
   {
-    image: "/src/assets/Redux.png",
+    image: redux,
     alt: "Redux",
     title: "React Redux",
   },
