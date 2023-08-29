@@ -13,14 +13,14 @@ function Intro() {
       id="about"
     >
       <div className="w-full block lg:flex md:flex pl-10 pr-4 md:p-10">
-        <div className="md:w-1/2 m-1 md:justify-center md:flex md:items-center">
+        <figure className="md:w-1/2 m-1 md:justify-center md:flex md:items-center">
           <img
             src={avatar}
             alt="Avatar"
             data-aos="zoom-out"
             className="w-1/4 rounded-full md:w-1/2 grayscale hover:grayscale-0 ease-in-out duration-30000"
           />
-        </div>
+        </figure>
         <div className="block md:w-1/2 md:flex md:flex-col md:justify-center selection:text-red-300">
           <h1 className="text-3xl p-1 font-handlee md:text-4xl ">About Me</h1>
           <p className="text-lg p-1 font-wixmadefor md:text-xl">

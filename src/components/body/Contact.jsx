@@ -246,6 +246,7 @@ export default function Modal() {
                     <form
                       ref={form}
                       onSubmit={sendEmail}
+                      method="post"
                       className="w-full text-gray-900"
                     >
                       {/* First and Last Name */}
