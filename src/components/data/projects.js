@@ -1,7 +1,12 @@
+import shopping from "../../assets/Shopping.gif" 
+import covid from "../../assets/Covid.gif" 
+import todo from "../../assets/ToDo.gif" 
+import calculator from "../../assets/Calculator.gif" 
+
 const Projects = [
   {
     id: 1,
-    image: "/src/assets/Shopping.gif",
+    image: shopping,
     alt: "Shopping Cart",
     title: "Shopping Cart",
     description: "ReactJS, Redux, React Router and Bootstrap",
@@ -9,7 +14,7 @@ const Projects = [
   },
   {
     id: 2,
-    image: "/src/assets/Covid.gif",
+    image: covid,
     alt: "Covid Report",
     title: "Covid Report",
     description: "ReactJS, React Bootstrap, React Router and Axios",
@@ -17,7 +22,7 @@ const Projects = [
   },
   {
     id: 3,
-    image: "/src/assets/Todo.gif",
+    image: todo,
     alt: "To Do List",
     title: "To Do List",
     description: "Tailwind, ReactJs and React hooks",
@@ -25,7 +30,7 @@ const Projects = [
   },
   {
     id: 4,
-    image: "/src/assets/Calculator.gif",
+    image: calculator,
     alt: "Calculator",
     title: "Calculator",
     description: "HTML, CSS and JavaScript",

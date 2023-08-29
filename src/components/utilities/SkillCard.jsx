@@ -7,7 +7,7 @@ function SkillCard(props) {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <section className="bg-gray-800 rounded-xl p-5 m-3" data-aos="fade-up" key={props.index}>
+    <section className="bg-gray-800 rounded-xl p-5 m-3" data-aos="fade-up" key={props.id}>
       <div className="h-full w-full flex-col flex justify-center items-center grayscale hover:grayscale-0 duration-300 ease-in-out">
         <img
           src={props.src}

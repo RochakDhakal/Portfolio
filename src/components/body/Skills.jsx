@@ -26,7 +26,7 @@ function Skills() {
                 src={items.image}
                 alt={items.alt}
                 title={items.title}
-                key={index}
+                key={items.id}
               />
             );
           }):null}
