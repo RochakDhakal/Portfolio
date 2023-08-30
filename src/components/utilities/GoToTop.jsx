@@ -7,6 +7,12 @@ function GoToTop() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
   const [visibility, setVisibility] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +33,7 @@ function GoToTop() {
   }, []);
   return (
     <div>
-      <a href="#" className={`${visibility ? "block" : "hidden"}`}>
+      <a onClick={scrollTop} className={`${visibility ? "block" : "hidden"}`}>
         <FontAwesomeIcon
           icon={faArrowUp}
           data-aos="fade-up"
