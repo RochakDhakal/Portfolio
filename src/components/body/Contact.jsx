@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Modal() {
   const [showModal, setShowModal] = useState(false);
@@ -17,6 +19,16 @@ export default function Modal() {
   const [msgErr, setMsgErr] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
   const form = useRef();
+  const successMsg = () => {
+    toast.success("Your Message Has Been Sent", {
+      theme: "dark",
+    });
+  };
+  const errorMsg = (e) => {
+    toast.warning(`Failed To Send Your Message Error: ${e}`, {
+      theme: "dark",
+    });
+  };
   const validateInputs = () => {
     let isValid = true;
 
@@ -82,11 +94,8 @@ export default function Modal() {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setIsDisabled(true);
-          alert(
-            "Your message has been sent!"
-          );
+          successMsg(); //Toastify Success
           setShowModal(false);
           setFname("");
           setLname("");
@@ -96,7 +105,7 @@ export default function Modal() {
         },
         (error) => {
           console.log(error.text);
-          alert("Mail To send Message!");
+          errorMsg(error.text); //Toastify Error
         }
       );
   };
@@ -185,16 +194,13 @@ export default function Modal() {
     );
   }, [fname, lname, mail, num, msg]);
   useEffect(() => {
-    Aos.init({duration:1000});
+    Aos.init({ duration: 1000 });
   }, []);
 
   return (
-    <aside
-      className="bg-gray-900 p-2  w-full flex justify-center items-center md:h-screen selection:text-red-300"
-      
-    >
-      <div className="md:w-3/4 bg-gray-800 p-2 rounded-3xl flex flex-col items-center justify-center" >
-        <div className="text-amber-100 "data-aos="fade-up">
+    <aside className="bg-gray-900 p-2  w-full flex justify-center items-center md:h-screen selection:text-red-300">
+      <div className="md:w-3/4 bg-gray-800 p-2 rounded-3xl flex flex-col items-center justify-center">
+        <div className="text-amber-100 " data-aos="fade-up">
           <h1
             className="font-handlee p-5 flex justify-center items-center text-3xl md:text-4xl"
             id="contact"
@@ -206,7 +212,7 @@ export default function Modal() {
             and I’ll get in touch as soon as possible.
           </p>
         </div>
-        <div className="pb-5 md:pb-10" >
+        <div className="pb-5 md:pb-10">
           <button
             className="font-wixmadefor m-5 my-10 bg-amber-100 text-gray-900 active:scale-90 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-110 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button"
@@ -348,6 +354,7 @@ export default function Modal() {
           </>
         ) : null}
       </div>
+      <ToastContainer />
     </aside>
   );
 }
