@@ -16,7 +16,6 @@ function Projects() {
         )
        }):null}
       </div>
-      <GoToTop/>
     </section>
   );
 }

@@ -6,6 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Modal() {
+/* The following code is a React component written in JavaScript. It defines several state variables using
+the `useState` hook. These state variables are used to manage the state of a form. */
   const [showModal, setShowModal] = useState(false);
   const [fname, setFname] = useState("");
   const [fnameErr, setFnameErr] = useState("");
@@ -19,6 +21,10 @@ export default function Modal() {
   const [msgErr, setMsgErr] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
   const form = useRef();
+/**
+ * The following code defines two functions, `successMsg` and `errorMsg`, which display success and error
+ * messages respectively using a toast notification.
+ */
   const successMsg = () => {
     toast.success("Your Message Has Been Sent", {
       theme: "dark",
@@ -29,10 +35,16 @@ export default function Modal() {
       theme: "dark",
     });
   };
+/**
+ * The function "validateInputs" checks if the input fields for first name, last name, email, phone
+ * number, and message are valid and returns a boolean value indicating whether all inputs are valid or
+ * not.
+ * @returns The function `validateInputs` is returning a boolean value `isValid`. This value indicates
+ * whether all the input fields are valid or not. If `isValid` is `true`, it means all the input fields
+ * are valid. If `isValid` is `false`, it means there is at least one invalid input field.
+ */
   const validateInputs = () => {
     let isValid = true;
-
-    // Error Messages
     if (fname.trim() === "") {
       setFnameErr("First name is required");
       isValid = false;
@@ -84,6 +96,8 @@ export default function Modal() {
       return;
     }
 
+    /* The following code is using the emailjs library to send a form submission. It is calling the
+    `sendForm` function with the following parameters: */
     emailjs
       .sendForm(
         "service_fso7ipt",
@@ -110,6 +124,9 @@ export default function Modal() {
       );
   };
 
+  /**
+   * The function `handleInputChange` is used to update state variables based on the input field name.
+   */
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -134,6 +151,10 @@ export default function Modal() {
     }
   };
 
+  /**
+   * The function `handleInputBlur` is used to validate input fields onBlur and display error messages
+   * if the input is invalid.
+   */
   const handleInputBlur = (e) => {
     const { name, value } = e.target;
 
@@ -182,6 +203,8 @@ export default function Modal() {
     }
   };
 
+  /* The following code is using the useEffect hook in React to set the value of the isDisabled state
+  variable. The isDisabled variable is being set based on the following conditions: */
   useEffect(() => {
     setIsDisabled(
       fname.trim() === "" ||
@@ -193,6 +216,12 @@ export default function Modal() {
         msg.trim() === ""
     );
   }, [fname, lname, mail, num, msg]);
+  /* The following code is using the useEffect hook in React to initialize the Aos library with a duration
+  of 1000 milliseconds. The useEffect hook is used to perform side effects in functional components,
+  such as initializing libraries, fetching data, or subscribing to events. In this case, it is
+  initializing the Aos library, which is a library for animating elements as they scroll into view.
+  The empty dependency array [] at the end of the useEffect hook ensures that the effect is only run
+  once, when the component is mounted. */
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -214,7 +243,7 @@ export default function Modal() {
         </div>
         <div className="pb-5 md:pb-10">
           <button
-            className="font-wixmadefor m-5 my-10 bg-amber-100 text-gray-900 active:scale-90 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-110 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            className="cursor-none font-wixmadefor m-5 my-10 bg-amber-100 text-gray-900 active:scale-90 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-110 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button"
             onClick={() => setShowModal(true)}
           >
