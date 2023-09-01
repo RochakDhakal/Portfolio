@@ -12,7 +12,7 @@ function Projects() {
       <div className="block p-2 lg:p-10">
        {project.length?project.map((items,index)=>{
         return(
-          <ProjectCard src={items.image} alt={items.alt} title={items.title} description={items.description} url={items.url} id={items.id}/>
+          <ProjectCard src={items.image} alt={items.alt} title={items.title} description={items.description} url={items.url} link={items.link} id={items.id}/>
         )
        }):null}
       </div>

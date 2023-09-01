@@ -11,6 +11,7 @@ const Projects = [
     title: "Shopping Cart",
     description: "ReactJS, Redux, React Router and Bootstrap",
     url: "https://github.com/RochakDhakal/ShoppingCart",
+    link:"https://shoppingcart-6or.pages.dev/"
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const Projects = [
     title: "Covid Report",
     description: "ReactJS, React Bootstrap, React Router and Axios",
     url: "https://github.com/RochakDhakal/Covid-19-Report",
+    link:"https://covid-19-report.pages.dev/"
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const Projects = [
     title: "To Do List",
     description: "Tailwind, ReactJs and React hooks",
     url: "https://github.com/RochakDhakal/To-do-List",
+    link:"https://to-do-list-5j1.pages.dev/"
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const Projects = [
     title: "Calculator",
     description: "HTML, CSS and JavaScript",
     url: "https://github.com/RochakDhakal/Web-Calculator",
+    link:"https://webcalculator.pages.dev/"
   },
 ];
 export default Projects;
