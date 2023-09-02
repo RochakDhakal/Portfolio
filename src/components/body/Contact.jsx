@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Modal() {
-/* The following code is a React component written in JavaScript. It defines several state variables using
+  /* The following code is a React component written in JavaScript. It defines several state variables using
 the `useState` hook. These state variables are used to manage the state of a form. */
   const [showModal, setShowModal] = useState(false);
   const [fname, setFname] = useState("");
@@ -21,10 +21,10 @@ the `useState` hook. These state variables are used to manage the state of a for
   const [msgErr, setMsgErr] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
   const form = useRef();
-/**
- * The following code defines two functions, `successMsg` and `errorMsg`, which display success and error
- * messages respectively using a toast notification.
- */
+  /**
+   * The following code defines two functions, `successMsg` and `errorMsg`, which display success and error
+   * messages respectively using a toast notification.
+   */
   const successMsg = () => {
     toast.success("Your Message Has Been Sent", {
       theme: "dark",
@@ -35,14 +35,21 @@ the `useState` hook. These state variables are used to manage the state of a for
       theme: "dark",
     });
   };
-/**
- * The function "validateInputs" checks if the input fields for first name, last name, email, phone
- * number, and message are valid and returns a boolean value indicating whether all inputs are valid or
- * not.
- * @returns The function `validateInputs` is returning a boolean value `isValid`. This value indicates
- * whether all the input fields are valid or not. If `isValid` is `true`, it means all the input fields
- * are valid. If `isValid` is `false`, it means there is at least one invalid input field.
- */
+  const escHandler = (e) => {
+    window.addEventListener("keyup", (e) => {
+      if (e.key === "Escape") {
+        setShowModal(false);
+      }
+    });
+  };
+  /**
+   * The function "validateInputs" checks if the input fields for first name, last name, email, phone
+   * number, and message are valid and returns a boolean value indicating whether all inputs are valid or
+   * not.
+   * @returns The function `validateInputs` is returning a boolean value `isValid`. This value indicates
+   * whether all the input fields are valid or not. If `isValid` is `true`, it means all the input fields
+   * are valid. If `isValid` is `false`, it means there is at least one invalid input field.
+   */
   const validateInputs = () => {
     let isValid = true;
     if (fname.trim() === "") {
@@ -225,6 +232,9 @@ the `useState` hook. These state variables are used to manage the state of a for
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  useEffect(() => {
+    escHandler();
+  });
 
   return (
     <aside className="bg-gray-900 p-2  w-full flex justify-center items-center md:h-screen selection:text-red-300">
@@ -243,7 +253,7 @@ the `useState` hook. These state variables are used to manage the state of a for
         </div>
         <div className="pb-5 md:pb-10">
           <button
-            className="cursor-none font-wixmadefor m-5 my-10 bg-amber-100 text-gray-900 active:scale-90 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-110 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            className="font-wixmadefor m-5 my-10 bg-amber-100 text-gray-900 active:scale-90 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-110 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button"
             onClick={() => setShowModal(true)}
           >
@@ -368,7 +378,7 @@ the `useState` hook. These state variables are used to manage the state of a for
                           Close
                         </button>
                         <button
-                          className="bg-emerald-500 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-105 active:scale-90 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          className="bg-emerald-500 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg hover:scale-105 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="submit"
                           disabled={isDisabled}
                         >

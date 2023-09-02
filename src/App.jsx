@@ -10,6 +10,7 @@ import Contact from "./components/body/Contact";
 import Footer from "./components/footer/Footer";
 import GoToTop from "./components/utilities/GoToTop";
 import CustomCursor from "./components/utilities/CustomCursor";
+import Connection from "./components/utilities/Connection";
 function App() {
   return (
     <>
@@ -22,7 +23,8 @@ function App() {
       <Experience />
       <Contact />
       <Footer/>
-      <CustomCursor/>
+      <CustomCursor/>{/* Function : Custom Cursor  */}
+      <Connection/>{/* Online Status */}
     </>
   );
 }

@@ -11,7 +11,7 @@ function Navbar() {
     <nav className="fixed top-0 w-screen z-50 flex items-center flex-wrap bg-gray-800 py-3 px-5 selection:text-red-400">
       <div className="flex w-full lg:hidden font-bold">
         <button
-          className="w-2/12 flex  font-bold border rounded text-amber-100 border-gray-800 hover:text-amber-100"
+          className="w-2/12 flex items-center font-bold border rounded text-amber-100 border-gray-800 hover:text-amber-100"
           onClick={toggleMenu}
         >
           <svg
@@ -41,33 +41,38 @@ function Navbar() {
           menuOpen ? "block" : "hidden"
         } lg:block`}
       >
-        <div className="text-sm lg:flex-grow lg:flex lg:justify-center">
+        <div className="text-sm lg:flex-grow lg:flex lg:justify-end">
           <a
             href="#about"
+            onClick={toggleMenu}
             className="block mt-4 lg:inline-block lg:mt-0 text-amber-100 lg:px-20 hover:text-amber-100 hover:scale-125 duration-150 mr-4"
           >
             About
           </a>
           <a
             href="#projects"
+            onClick={toggleMenu}
             className="block mt-4 lg:inline-block lg:mt-0 text-amber-100 lg:px-20 hover:text-amber-100 hover:scale-125 duration-150 mr-4"
           >
             Projects
           </a>
           <a
             href="#skills"
+            onClick={toggleMenu}
             className="block mt-4 lg:inline-block lg:mt-0 text-amber-100 lg:px-20 hover:text-amber-100 hover:scale-125 duration-150 mr-4"
           >
             Skills
           </a>
           <a
             href="#experience"
+            onClick={toggleMenu}
             className="block mt-4 lg:inline-block lg:mt-0 text-amber-100 lg:px-20 hover:text-amber-100 hover:scale-125 duration-150 mr-4"
           >
             Experience
           </a>
           <a
             href="#contact"
+            onClick={toggleMenu}
             className="block mt-4 lg:inline-block lg:mt-0 text-amber-100 lg:px-20 hover:text-amber-100 hover:scale-125 duration-150"
           >
             Contact
