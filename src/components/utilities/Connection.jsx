@@ -16,10 +16,10 @@ function Connection() {
     });
   };
 
-/**
- * The function `handleOnlineStatusChange` checks if the user's online status has changed and calls
- * appropriate functions based on the current and new online status.
- */
+  /**
+   * The function `handleOnlineStatusChange` checks if the user's online status has changed and calls
+   * appropriate functions based on the current and new online status.
+   */
   const handleOnlineStatusChange = () => {
     if (!online && navigator.onLine) {
       userOnline();

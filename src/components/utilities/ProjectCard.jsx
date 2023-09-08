@@ -44,7 +44,7 @@ function ProjectCard(props) {
             target="_blank"
             className="block pt-3 hover:scale-110 active:scale-90 uppercase"
           >
-            Project
+            Demo
           </a>
         </div>
       </div>
