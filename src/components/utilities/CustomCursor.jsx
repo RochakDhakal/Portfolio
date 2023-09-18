@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 
 function CustomCursor() {
   const [mouseAxis, setMouseAxis] = useState({
-    x: null,
-    y: null,
+    x: -20,
+    y: -20,
   });
   useEffect(() => {
     const mouseMovement = (e) => {
       setMouseAxis({
-        x: e.clientX - 20,
-        y: e.clientY - 20,
+        x: e.clientX,
+        y: e.clientY,
       });
     };
-    
+
     window.addEventListener("mousemove", mouseMovement);
     return () => {
       window.removeEventListener("click", mouseMovement);
@@ -20,12 +20,14 @@ function CustomCursor() {
   }, []);
   return (
     <>
-        <div
-          className="hidden lg:block fixed h-5 w-5 p-5 border-2 backdrop-blur border-white rounded-full z-50 pointer-events-none"
-          style={{ top: mouseAxis.y, left: mouseAxis.x }}
-        >
-          <div className="fixed top-3 cursor-none left-3 h-2 w-2 p-2 bg-green-500 backdrop-invert rounded-full z-50"></div>
-        </div>
+      <div
+        className="fixed cursor-none  pointer-events-none border-gray-500 border h-3 w-3 p-4 z-50 rounded-full duration-200 transition-all ease-linear"
+        style={{ top: mouseAxis.y - 9, left: mouseAxis.x - 9 }}
+      ></div>
+      <div
+        className="fixed cursor-none h-2 w-2 p-2 backdrop-invert rounded-full z-50 pointer-events-none"
+        style={{ top: mouseAxis.y, left: mouseAxis.x }}
+      ></div>
     </>
   );
 }
