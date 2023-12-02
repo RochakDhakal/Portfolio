@@ -7,13 +7,16 @@ function Intro() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  console.log(
+    "01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100"
+  );
   return (
     <div
       className="bg-gray-900 text-amber-100 md:h-screen py-16 md:p-10"
       id="about"
     >
-      <div className="w-full block lg:flex md:flex pl-10 pr-4 md:p-10">
-        <figure
+      <main className="w-full block lg:flex md:flex pl-10 pr-4 md:p-10">
+        <section
           className="md:w-1/2 m-1 md:h-1/2 rounded-full md:justify-center md:flex md:items-center"
           data-aos="zoom-out"
         >
@@ -22,9 +25,11 @@ function Intro() {
             alt="Avatar"
             className="w-1/4 rounded-full md:w-1/2 grayscale hover:grayscale-0 transition-all ease-in-out duration-500"
           />
-        </figure>
-        <div className="block md:w-1/2 md:flex md:flex-col md:justify-center selection:text-red-300">
-          <h1 className="text-3xl p-1 font-handlee md:text-4xl ">About Me</h1>
+        </section>
+        <article className="block md:w-1/2 md:flex md:flex-col md:justify-center selection:text-red-300">
+          <header>
+            <h1 className="text-3xl p-1 font-handlee md:text-4xl ">About Me</h1>
+          </header>
           <p className="text-lg p-1 font-wixmadefor md:text-xl">
             Passionate beginner frontend developer, diving into web development,
             creating interactive experiences with HTML, CSS, Javascript, and
@@ -43,8 +48,8 @@ function Intro() {
               </button>
             </a>
           </div>
-        </div>
-      </div>
+        </article>
+      </main>
     </div>
   );
 }
