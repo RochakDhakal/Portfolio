@@ -5,6 +5,7 @@ import react from "../../assets/react.png";
 import bootstrap from "../../assets/bootstrap.png";
 import tailwind from "../../assets/tailwind.png";
 import redux from "../../assets/Redux.png";
+import wordpress from "../../assets/wordpress.png";
 const Skills = [
   {
     id: 1,
@@ -49,7 +50,7 @@ const Skills = [
     title: "React Redux",
   },
   {
-    id: 7,
+    id: 8,
     image: wordpress,
     alt: "WordPress",
     title: "WordPress",
