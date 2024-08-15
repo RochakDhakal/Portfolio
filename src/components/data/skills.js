@@ -48,5 +48,11 @@ const Skills = [
     alt: "Redux",
     title: "React Redux",
   },
+  {
+    id: 7,
+    image: wordpress,
+    alt: "WordPress",
+    title: "WordPress",
+  },
 ];
 export default Skills;
