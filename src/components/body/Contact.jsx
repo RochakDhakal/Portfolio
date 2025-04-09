@@ -237,8 +237,8 @@ the `useState` hook. These state variables are used to manage the state of a for
   });
 
   return (
-    <aside className="bg-gray-900 p-2  w-full flex justify-center items-center md:h-screen selection:text-red-300">
-      <div className="md:w-3/4 bg-gray-800 p-2 rounded-3xl flex flex-col items-center justify-center">
+    <aside className="bg-gray-900 p-2  w-full flex justify-center items-center md:h-screen selection:text-red-300" >
+      <div className="md:w-3/4 bg-gray-800 p-2 rounded-3xl flex flex-col items-center justify-center" >
         <div className="text-amber-100 " data-aos="fade-up">
           <h1
             className="font-handlee p-5 flex justify-center items-center text-3xl md:text-4xl"

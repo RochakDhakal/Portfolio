@@ -12,7 +12,7 @@ function SkillCard(props) {
         <img
           src={props.src}
           alt={props.alt}
-          className=" h-3/5 p-1 flex items-center justify-center md:h-4/5 md:w-2/3 hover:scale-105"
+          className=" h-3/5 p-1 flex items-center justify-center object-contain md:h-4/5 md:w-2/3 hover:scale-105"
         />
         <h3 className="font-wixmadefor h-2/5 text-center mt-2 flex items-center justify-center md:h-1/5">
           {props.title}

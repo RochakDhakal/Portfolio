@@ -20,7 +20,7 @@ function ProjectCard(props) {
             />
           </a>
         </div>
-        <div className="w-2/5 h-full text-left p-5 lg:w-2/4" data-aos="fade-up">
+        <div className="w-2/5 h-full text-left p-5 lg:w-2/4">
           <div className="h-1/2 font-wixmadefor text-base md:text-3xl text-amber-300">
             {props.title}
           </div>
@@ -30,7 +30,6 @@ function ProjectCard(props) {
         </div>
         <div
           className="w-1/4 text-center text-sm lg:w-1/4 lg:text-xl"
-          data-aos="fade-up"
         >
           <a
             href={props.url}

@@ -17,7 +17,7 @@ function Skills() {
       </h3>
       <div className="flex justify-center items-center">
         <div
-          className="md:w-3/4 grid md:grid-cols-4 grid-cols-2 h-full md:m-5 md:p-5"
+          className="md:w-3/4 grid md:grid-cols-4 grid-cols-2 md:m-5 md:p-5"
           data-aos="fade-up"
         >
           {skill.length?skill.map((items, index) => {
